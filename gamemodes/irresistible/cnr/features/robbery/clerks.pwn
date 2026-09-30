@@ -204,7 +204,9 @@ hook FCNPC_OnSpawn( npcid )
 	return 1;
 }
 
-hook FCNPC_OnTakeDamage( npcid, damagerid, weaponid, bodypart, Float: health_loss )
+/// Handle NPC damage using the FCNPC 2.x parameter order.
+/// Reference: https://github.com/ziggi/FCNPC/blob/v2.0.11/FCNPC.inc
+hook FCNPC_OnTakeDamage( npcid, damagerid, Float: health_loss, weaponid, bodypart )
 {
 	new civilianid = GetCivilianNpcFromPlayer( npcid );
 	new clerkid = GetRobberyNpcFromPlayer( npcid );
@@ -424,8 +426,8 @@ stock FCNPC_ShootAtPlayer( playerid, npcid, weaponid = 25, clerkid = -1, bool: w
 	FCNPC_ResetAnimation( npcid );
 	FCNPC_ClearAnimations( npcid );
 	FCNPC_SetWeapon( npcid, weaponid );
-	FCNPC_ToggleInfiniteAmmo( npcid, true );
-	FCNPC_AimAtPlayer( npcid, playerid, .shoot = true, .shoot_delay = -1, .setangle = true, .offset_x = 0.0, .offset_y = 0.0, .offset_z = 0.6 );
+	FCNPC_UseInfiniteAmmo( npcid, true );
+	FCNPC_AimAtPlayer( npcid, playerid, .shoot = true, .shoot_delay = -1, .set_angle = true, .offset_x = 0.0, .offset_y = 0.0, .offset_z = 0.6 );
 	return 1;
 }
 
@@ -584,10 +586,10 @@ function RobberyNpcShootCheck( clerkid, playerid )
 
 	if ( specialAnimation == SPECIAL_ACTION_DUCK && g_robberyNpcData[ clerkid ] [ E_SHOOTING_OFFSET ] != 0.1 ) {
 		g_robberyNpcData[ clerkid ] [ E_SHOOTING_OFFSET ] = 0.1;
-		FCNPC_AimAtPlayer( npcid, playerid, .shoot = true, .shoot_delay = -1, .setangle = true, .offset_x = 0.0, .offset_y = 0.0, .offset_z = 0.1 );
+		FCNPC_AimAtPlayer( npcid, playerid, .shoot = true, .shoot_delay = -1, .set_angle = true, .offset_x = 0.0, .offset_y = 0.0, .offset_z = 0.1 );
 	} else if ( specialAnimation != SPECIAL_ACTION_DUCK && g_robberyNpcData[ clerkid ] [ E_SHOOTING_OFFSET ] != 0.6 ) {
 		g_robberyNpcData[ clerkid ] [ E_SHOOTING_OFFSET ] = 0.6;
-		FCNPC_AimAtPlayer( npcid, playerid, .shoot = true, .shoot_delay = -1, .setangle = true, .offset_x = 0.0, .offset_y = 0.0, .offset_z = 0.6 );
+		FCNPC_AimAtPlayer( npcid, playerid, .shoot = true, .shoot_delay = -1, .set_angle = true, .offset_x = 0.0, .offset_y = 0.0, .offset_z = 0.6 );
 	}
 
 	return ( g_robberyNpcData[ clerkid ] [ E_SHOOTING_TIMER ] = SetTimerEx( "RobberyNpcShootCheck", 1500, false, "dd", clerkid, playerid ) ), 1;

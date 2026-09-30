@@ -971,7 +971,7 @@ static stock StockMarket_CreateTradeLog( stockid, buyer_acc, seller_acc, Float: 
 
 static stock StockMarket_ShowBuySlip( playerid, stockid )
 {
-	mysql_tquery( dbHandle, sprintf( "SELECT SUM(`SHARES`) AS `SALE_SHARES` FROM `STOCK_SELL_ORDERS` WHERE `STOCK_ID`=%d", stockid ), "StockMarket_OnShowBuySlip", "dd", playerid, stockid );
+	mysql_tquery( dbHandle, sprintf( "SELECT COALESCE(SUM(`SHARES`), 0) AS `SALE_SHARES` FROM `STOCK_SELL_ORDERS` WHERE `STOCK_ID`=%d", stockid ), "StockMarket_OnShowBuySlip", "dd", playerid, stockid );
 	return 1;
 }
 
@@ -1059,7 +1059,7 @@ static stock ShowPlayerShares( playerid )
 }
 
 static stock UpdateStockMaxShares( stockid ) {
-	mysql_tquery( dbHandle, sprintf( "SELECT (SELECT SUM(`SHARES`) FROM `STOCK_OWNERS` WHERE `STOCK_ID`=%d) AS `SHARES_OWNED`, (SELECT SUM(`SHARES`) FROM `STOCK_SELL_ORDERS` WHERE `STOCK_ID`=%d) AS `SHARES_HELD`", stockid, stockid ), "Stock_UpdateMaximumShares", "d", stockid );
+	mysql_tquery( dbHandle, sprintf( "SELECT (SELECT COALESCE(SUM(`SHARES`), 0) FROM `STOCK_OWNERS` WHERE `STOCK_ID`=%d) AS `SHARES_OWNED`, (SELECT COALESCE(SUM(`SHARES`), 0) FROM `STOCK_SELL_ORDERS` WHERE `STOCK_ID`=%d) AS `SHARES_HELD`", stockid, stockid ), "Stock_UpdateMaximumShares", "d", stockid );
 }
 
 /*

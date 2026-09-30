@@ -1,0 +1,25 @@
+echo SF-CNR local SA-MP server
+lanmode 1
+bind 127.0.0.1
+port 7777
+rcon_password {rcon_password}
+maxplayers 335
+maxnpc 210
+hostname SF-CNR Local
+gamemode0 sf-cnr 1
+filterscripts
+announce 0
+query 1
+weburl localhost
+onfoot_rate 40
+incar_rate 40
+weapon_rate 40
+stream_distance 300.0
+stream_rate 1000
+plugins crashdetect.so mysql.so gvar.so regex.so sscanf.so streamer.so Whirlpool.so mapandreas.so FCNPC.so RouteConnectorPlugin.so sampcac_server.so TPoker.so merrandom.so FileManager.so
+logtimeformat [%H:%M:%S]
+language English
+messageslimit 10000
+messageholelimit 30000
+# YSI 4 scans the large AMX once at startup; keep hang detection above that cost.
+long_call_time 10000000

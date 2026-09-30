@@ -1,0 +1,10 @@
+FROM docker.io/library/debian:12-slim@sha256:f3034a6ec3c1205360777c4aae76234998866ad18806ae62b63a3f84ccad782b
+RUN dpkg --add-architecture i386 \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends libc6:i386 libstdc++6:i386 libgcc-s1:i386 \
+    && rm -rf /var/lib/apt/lists/*
+WORKDIR /server
+ENV LD_LIBRARY_PATH=/server/lib
+# Legacy hook trampolines must use mmap rather than the SELinux-protected brk heap.
+ENV MALLOC_MMAP_THRESHOLD_=0
+ENTRYPOINT ["./samp03svr"]

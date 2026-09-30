@@ -16,7 +16,7 @@
 
 #include <modelsizes>
 #pragma compress 1
-#include <foreach>
+#include <YSI\y_iterate>
 
 #if !defined PHY_TIMER_INTERVAL
 	#define PHY_TIMER_INTERVAL (50.0)

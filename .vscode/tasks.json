@@ -12,6 +12,10 @@
         "-(+",
         //"-d3"
       ],
+      "linux": {
+        "command": "python3",
+        "args": ["${workspaceFolder}/tools/local.py", "build"]
+      },
       "group": {
         "kind": "build",
         "isDefault": true

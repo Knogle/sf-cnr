@@ -1,0 +1,250 @@
+[
+  {
+    "name": "compiler",
+    "url": "https://github.com/pawn-lang/compiler/releases/download/v3.10.8/pawnc-3.10.8-linux.tar.gz",
+    "kind": "tar",
+    "files": {
+      "pawnc-3.10.8-linux/": ".deps/compiler/"
+    },
+    "sha256": "f3a9be8455b6ee289884b246f7ef0c1b4ebebf510b33bc2be47eb41eabbf3e69"
+  },
+  {
+    "name": "samp",
+    "url": "https://raw.githubusercontent.com/racespeedtime/samp-files-archive/main/samp037svr_R2-1.tar.gz",
+    "kind": "tar",
+    "files": {
+      "samp03/samp03svr": ".runtime/samp03svr",
+      "samp03/samp-npc": ".runtime/samp-npc",
+      "samp03/LICENSE": ".runtime/SA-MP-LICENSE"
+    },
+    "sha256": "f8ead0b15683fc34f13a7a84ba9ea7252b17c5e3161d8255364e1abedd697a53"
+  },
+  {
+    "name": "stdlib",
+    "url": "https://raw.githubusercontent.com/racespeedtime/samp-files-archive/main/samp037_svr_R2-2-1_win32.zip",
+    "kind": "zip",
+    "files": {
+      "pawno/include/": "include/"
+    },
+    "sha256": "781db1d35a3d74fee84952d8d22731c8abbc78cc6baa571b65bd4d5d366fbe78"
+  },
+  {
+    "name": "ysi",
+    "url": "https://codeload.github.com/pawn-lang/YSI-Includes/tar.gz/a9b049f2ca140b0d334b9185af713652c09e7c69",
+    "kind": "tar",
+    "files": {
+      "YSI-Includes-a9b049f2ca140b0d334b9185af713652c09e7c69/YSI/": "include/YSI/",
+      "YSI-Includes-a9b049f2ca140b0d334b9185af713652c09e7c69/YSI_Core/": "include/YSI_Core/",
+      "YSI-Includes-a9b049f2ca140b0d334b9185af713652c09e7c69/YSI_Coding/": "include/YSI_Coding/",
+      "YSI-Includes-a9b049f2ca140b0d334b9185af713652c09e7c69/YSI_Data/": "include/YSI_Data/",
+      "YSI-Includes-a9b049f2ca140b0d334b9185af713652c09e7c69/YSI_Internal/": "include/YSI_Internal/",
+      "YSI-Includes-a9b049f2ca140b0d334b9185af713652c09e7c69/YSI_Players/": "include/YSI_Players/",
+      "YSI-Includes-a9b049f2ca140b0d334b9185af713652c09e7c69/YSI_Server/": "include/YSI_Server/",
+      "YSI-Includes-a9b049f2ca140b0d334b9185af713652c09e7c69/YSI_Storage/": "include/YSI_Storage/",
+      "YSI-Includes-a9b049f2ca140b0d334b9185af713652c09e7c69/YSI_Visual/": "include/YSI_Visual/"
+    },
+    "sha256": "cfc8960dbb298e61ffc1f11cb6db399dd9f7472d3a24eae0c9d0c616143013a2"
+  },
+  {
+    "name": "amx",
+    "url": "https://codeload.github.com/Zeex/amx_assembly/tar.gz/90c6ce72bd209e97c6c785173eff8fbce35d030a",
+    "kind": "tar",
+    "files": {
+      "amx_assembly-90c6ce72bd209e97c6c785173eff8fbce35d030a/": "include/amx_assembly/"
+    },
+    "sha256": "6a54ea8d6f513129bfc717dd39e3936de88dd34ab11dfbbf5a579d1aad8aee0c"
+  },
+  {
+    "name": "mysql",
+    "url": "https://github.com/pBlueG/SA-MP-MySQL/releases/download/R39-6/mysql-R39-6-Linux.tar.gz",
+    "kind": "tar",
+    "files": {
+      "plugins/mysql_static.so": ".runtime/plugins/mysql.so"
+    },
+    "sha256": "2094ee8c6f989e557ef1bfd8f42dcd286b1bb617b6f0c806c196d9831f2755b6"
+  },
+  {
+    "name": "mysql-include",
+    "url": "https://raw.githubusercontent.com/pBlueG/SA-MP-MySQL/R39-6/a_mysql.inc",
+    "kind": "file",
+    "files": {
+      "": "include/a_mysql.inc"
+    },
+    "sha256": "cc203212af6f2a4ba95a96ca6953520209c4f3e47d81b2b19752228592c09efe"
+  },
+  {
+    "name": "gvar",
+    "url": "https://github.com/samp-incognito/samp-gvar-plugin/releases/download/v1.3/samp-gvar-plugin-1.3.zip",
+    "kind": "zip",
+    "files": {
+      "plugins/gvar.so": ".runtime/plugins/gvar.so",
+      "pawno/include/gvar.inc": "include/gvar.inc"
+    },
+    "sha256": "fb7709b8b0d04701c9e738e5f1354c072214835b9421b6d017ab16f187243e75"
+  },
+  {
+    "name": "sscanf",
+    "url": "https://github.com/Y-Less/sscanf/releases/download/v2.8.3/sscanf-2.8.3-linux.tar.gz",
+    "kind": "tar",
+    "files": {
+      "plugins/sscanf.so": ".runtime/plugins/sscanf.so",
+      "pawno/include/sscanf2.inc": "include/sscanf2.inc"
+    },
+    "sha256": "9abda8765adbbb5414b85bdc67e13752edd476de3fc70f32853fdd19cfe1d339"
+  },
+  {
+    "name": "streamer",
+    "url": "https://github.com/samp-incognito/samp-streamer-plugin/releases/download/v2.9.3/samp-streamer-plugin-2.9.3.zip",
+    "kind": "zip",
+    "files": {
+      "plugins/streamer.so": ".runtime/plugins/streamer.so",
+      "pawno/include/streamer.inc": "include/streamer.inc"
+    },
+    "sha256": "f091010953c287968bee727bff8ac825568c98bf84ac2aa232032899eac20029"
+  },
+  {
+    "name": "whirlpool",
+    "url": "https://github.com/Southclaws/samp-whirlpool/releases/download/v1.0.0/Whirlpool.so",
+    "kind": "file",
+    "files": {
+      "": ".runtime/plugins/Whirlpool.so"
+    },
+    "sha256": "e47f5bd9524869c76716905c6b6910349b47c04d890a8f6df3ea407b47d832fd"
+  },
+  {
+    "name": "fcnpc",
+    "url": "https://github.com/ziggi/FCNPC/releases/download/v2.0.11/FCNPC-2.0.11.zip",
+    "kind": "zip",
+    "files": {
+      "FCNPC-2.0.11/plugins/FCNPC.so": ".runtime/plugins/FCNPC.so",
+      "FCNPC-2.0.11/FCNPC.inc": "include/FCNPC.inc"
+    },
+    "sha256": "3f698579d4cde0d9c4622cf7f60173be4ebbef64729438ef09f487979ebf3b51"
+  },
+  {
+    "name": "mapandreas",
+    "url": "https://github.com/philip1337/samp-plugin-mapandreas/releases/download/v1.2.1/MapAndreas-linux-x86.zip",
+    "kind": "zip",
+    "files": {
+      "linux/plugins/mapandreas.so": ".runtime/plugins/mapandreas.so",
+      "linux/include/mapandreas.inc": "include/mapandreas.inc",
+      "linux/scriptfiles/": ".runtime/scriptfiles/"
+    },
+    "sha256": "028a73e42f2c397abbcb04d1c75e18b5a66e4f05821544c2d20be39ed363c05b"
+  },
+  {
+    "name": "filemanager",
+    "url": "https://github.com/JaTochNietDan/SA-MP-FileManager/releases/download/1.5.1/FileManager_1.5_Linux.zip",
+    "kind": "zip",
+    "files": {
+      "filemanager.so": ".runtime/plugins/FileManager.so",
+      "filemanager.inc": "include/filemanager.inc"
+    },
+    "sha256": "6d275237bb9bd4b0773cab2d3d3ce383497da95f04f55e1f76e39f6c5700767e"
+  },
+  {
+    "name": "crashdetect",
+    "url": "https://github.com/Y-Less/samp-plugin-crashdetect/releases/download/v4.22/crashdetect-4.22-linux.tar.gz",
+    "kind": "tar",
+    "files": {
+      "crashdetect-4.22-linux/crashdetect.so": ".runtime/plugins/crashdetect.so"
+    },
+    "sha256": "4234ac5ffa54f2eaa322ab2bb8b6096042fe65d5574ae15e3431df15b709f2ef"
+  },
+  {
+    "name": "merrandom",
+    "url": "https://raw.githubusercontent.com/openmultiplayer/archive/08a450d21c8f118cb72c034b5821cc822eee50df/plugins/Merrandom.zip",
+    "kind": "zip",
+    "files": {
+      "merrandom.so": ".runtime/plugins/merrandom.so",
+      "merrandom.inc": "include/merrandom.inc"
+    },
+    "sha256": "b6741be683c409d99a7b1e9b777b209b411ca9894d22994acbbc8b52f97df5fd"
+  },
+  {
+    "name": "regex",
+    "url": "https://raw.githubusercontent.com/openmultiplayer/archive/08a450d21c8f118cb72c034b5821cc822eee50df/plugins/RegEx%20Plugin.zip",
+    "kind": "zip",
+    "files": {
+      "plugins/regex.so": ".runtime/plugins/regex.so",
+      "pawno/includes/regex.inc": "include/regex.inc"
+    },
+    "sha256": "8f873bc4f5b91897eea4f1927df665fc2e74e7351c9f53a84ca6b12b7f31a8ba"
+  },
+  {
+    "name": "gps",
+    "url": "https://codeload.github.com/grasmanek94/SA-MP-GPS/tar.gz/6e3a0fc1bf93982ff1ca4ada59662012b6b322b3",
+    "kind": "tar",
+    "files": {
+      "SA-MP-GPS-6e3a0fc1bf93982ff1ca4ada59662012b6b322b3/Plugin/include/RouteConnector.inc": "include/RouteConnector.inc",
+      "SA-MP-GPS-6e3a0fc1bf93982ff1ca4ada59662012b6b322b3/Plugin/plugins/RouteConnectorPlugin.so": ".runtime/plugins/RouteConnectorPlugin.so",
+      "SA-MP-GPS-6e3a0fc1bf93982ff1ca4ada59662012b6b322b3/Plugin/scriptfiles/GPS.dat": ".runtime/scriptfiles/GPS.dat",
+      "SA-MP-GPS-6e3a0fc1bf93982ff1ca4ada59662012b6b322b3/Plugin/source/linux_tbb/libtbb.so.2": ".runtime/lib/libtbb.so.2",
+      "SA-MP-GPS-6e3a0fc1bf93982ff1ca4ada59662012b6b322b3/Plugin/source/linux_tbb/libtbbmalloc.so.2": ".runtime/lib/libtbbmalloc.so.2"
+    },
+    "sha256": "7181f7a761f72ff4e8b8f8fa9fc0922f2dd8b2a9da313bffeee209e06bd01d3d"
+  },
+  {
+    "name": "sampcac",
+    "url": "https://raw.githubusercontent.com/ins1x/sampcac-docs/f609cf0c9ddf6eada57439bee8029aa54e903d88/plugins/sampcac_server.so",
+    "kind": "file",
+    "files": {
+      "": ".runtime/plugins/sampcac_server.so"
+    },
+    "sha256": "46e8034ef0ecc1a1ceb36d21446e4ff8a5dacc36050442d7f95bb6d10bc338fc"
+  },
+  {
+    "name": "sampcac-include",
+    "url": "https://raw.githubusercontent.com/ins1x/sampcac-docs/f609cf0c9ddf6eada57439bee8029aa54e903d88/pawno/include/sampcac.inc",
+    "kind": "file",
+    "files": {
+      "": "include/sampcac.inc"
+    },
+    "sha256": "f8604ab0ad2c097b7b7c45bbe9f980121bdf44b34ddf0f8c3f15c8257711cefb"
+  },
+  {
+    "name": "zcmd",
+    "url": "https://raw.githubusercontent.com/Southclaws/zcmd/1ab0082e316de399f4d061f5caca85a1630f2427/zcmd.inc",
+    "kind": "file",
+    "files": {
+      "": "include/zcmd.inc"
+    },
+    "sha256": "ed00a2d9b993ce2ee3add1b7c8c8e546a962b61267ac156b440504d63ce7b867"
+  },
+  {
+    "name": "modelsizes",
+    "url": "https://raw.githubusercontent.com/Abagail/modelsizes/4969d991361085c8ea79dd84bbc55c6b645dbb0e/modelsizes.inc",
+    "kind": "file",
+    "files": {
+      "": "include/modelsizes.inc"
+    },
+    "sha256": "458898386785c50878424f7918347996bf7db754d1db7e08287b64f19485ac55"
+  },
+  {
+    "name": "sort",
+    "url": "https://raw.githubusercontent.com/oscar-broman/md-sort/65c72b6685576ee7e5a6102406970c2f9ef04980/md-sort.inc",
+    "kind": "file",
+    "files": {
+      "": "include/md-sort.inc"
+    },
+    "sha256": "b2c32150215e308c045d29ff67e80dc971d0b9d6d5df5b39497f17978a0ab5e9"
+  },
+  {
+    "name": "progress",
+    "url": "https://raw.githubusercontent.com/Southclaws/progress2/v2.1.2/progress2.inc",
+    "kind": "file",
+    "files": {
+      "": "include/progress2.inc"
+    },
+    "sha256": "c64bfd5b28776760f0b482fd30e8cfba61b5fd2cadd7a167eabeedfbffde818b"
+  },
+  {
+    "name": "mathparser",
+    "url": "https://raw.githubusercontent.com/openmultiplayer/archive/08a450d21c8f118cb72c034b5821cc822eee50df/includes/MathParser.inc",
+    "kind": "file",
+    "files": {
+      "": "include/MathParser.inc"
+    },
+    "sha256": "2a005e57162773ded51fb8920eef01e429ed88c39e9f2f3c96c6a961707e37e7"
+  }
+]
